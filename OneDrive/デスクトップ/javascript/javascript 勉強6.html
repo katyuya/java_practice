@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello!</title>
+    <style>
+      body{
+        font-size: 14px;
+        font-weight: plain;
+      }
+      h1{
+        color: white;
+        padding: 5px;
+        font-size: 24px;
+        background-color: red;
+      }
+    </style>
+    <script>
+      function initial(){
+        var msg = document.querySelector('#msg');
+        msg.textContent = "onloadを使えばロード後に実行できます。";
+      }
+    </script>
+  </head>
+  <body onload="initial();">
+    <h1 id="title">Hello!</h1>
+    <p id="msg">this is message.</p>
+  </body>
+</html>

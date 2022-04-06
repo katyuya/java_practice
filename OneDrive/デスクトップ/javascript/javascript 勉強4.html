@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello!</title>
+    <style>
+      body{
+        font-size: 14px;
+        font-weight: plain;
+      }
+      h1{
+        color: white;
+        padding: 5px;
+        font-size: 24px;
+        background-color: red;
+      }
+      .head{
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      var syohi_zei = {};
+
+      syohi_zei['tax'] = 8;
+      syohi_zei['price'] = 0;
+
+      syohi_zei['kingaku'] = function(){
+        document.write('<p><span class="head")金額:</span>' + syohi_zei['price'] + '円<p>');
+      }
+      syohi_zei['zeikomi'] = function(){
+        var n = syohi_zei['price'] * (100 + syohi_zei['tax']) / 100;
+
+        document.write('<p><span class="head")税込み価格:</span>' + Math.floor(n) + '円</p>'); 
+      }
+
+      syohi_zei['zeinuki'] = function(){
+        var n = syohi_zei['price'] / ((100 + syohi_zei['tax']) / 100);
+
+        document.write('<p><span class="head")税抜き価格:</span>' + Math.floor(n) + '円</p>'); 
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <script>
+      syohi_zei['price'] = 12800;
+      syohi_zei['kingaku']();
+      syohi_zei['zeikomi']();
+      syohi_zei['zeinuki']();
+    </script>
+  </body>
+</html>
