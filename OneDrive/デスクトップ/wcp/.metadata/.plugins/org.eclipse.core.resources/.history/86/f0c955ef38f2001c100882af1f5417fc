@@ -1,0 +1,9 @@
+
+public class bokusingu {
+	public static void main(String[] args) {
+		Integer integer1 = 5;
+		Integer integer2 = Integer.valueOf(5);
+		int int1 = integer1;
+		int int2 = integer2.intValue();
+	}
+}
