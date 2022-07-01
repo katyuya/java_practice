@@ -1,0 +1,25 @@
+public class Chapter07 {
+	public static void main(String[] args) {
+		int km = 8;
+		if (km <= 5) {
+			System.out.println("とても近いです");
+		} else if (km <= 10) {
+			System.out.println("近いです");
+		} else if (km <= 15) {
+			System.out.println("遠いです");
+		} else {
+			System.out.println("とても遠いです");
+		}
+		String color = "red";
+		if (color == "red") {
+			System.out.println("赤信号です");
+		} else if (color == "yellow") {
+			System.out.println("黄信号です");
+		} else if (color == "blue") {
+			System.out.println("青信号です");
+		} else {
+			System.out.println("信号の色ではありません");
+		}
+		
+	}
+}
